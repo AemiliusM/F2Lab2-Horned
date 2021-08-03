@@ -1,0 +1,11 @@
+.App {
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns:auto;
+   grid-column-end: 2;
+}
+div{
+display: grid;
+flex-wrap: wrap;
+}
