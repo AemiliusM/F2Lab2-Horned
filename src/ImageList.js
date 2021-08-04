@@ -14,7 +14,6 @@ class ImageList extends Component {
                          horns={item.horns}
                          description={item.description}
                          title={item.title} />;
-                // return <ImageItem key={item.horns} image={item} />;
             })}
             </>
          );

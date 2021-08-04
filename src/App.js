@@ -4,20 +4,28 @@ import ImageList from './ImageList.js';
 import './Horned.css'
 
 class App extends Component {
-  state = { keyword: 'All', horns:1};
+  state = { keyword: 'All', horns:"All"};
   handleType = (event) => {
     this.setState({ keyword: event.target.value });
     console.log(event.target.value)
   };
   handleHorns = (event) => {
-    this.setState({ horns: Number(event.target.value) });
-    console.log(typeof event.target.value)
+    this.setState({ horns: event.target.value });
     }
   render() { 
 
     const filterCreatures = images.filter(
-      (image) => (this.state.type === 'All' || image.keyword === this.state.keyword) && (image.horns === this.state.horns)
-    );
+      (image) =>  {
+        return (this.state.keyword === 'All' || this.state.keyword === image.keyword) && (this.state.horns ==='All' || Number(this.state.horns) === image.horns)
+      }
+      
+    
+        );
+
+    // const filterHorns = images.filter(
+    //   (image) => 
+    // );
+    console.log (filterCreatures);
     return ( 
       <div className='App'>
         <h4>Horn-ed Cre-atures!</h4>
@@ -38,6 +46,7 @@ class App extends Component {
         </select>
         <span>Number of horns</span>
         <select onChange={this.handleHorns}>
+          <option value='All'>All</option>
           <option value= '1'>1</option>
           <option value= '2'>2</option>
           <option value= '3'>3</option>
