@@ -13,7 +13,7 @@ class ImageItem extends Component {
                 width='100'
                src={this.props.image} 
                 />
-               <p>Description:{this.props.description}</p>
+               <p><span>Description:{this.props.description}</span></p>
             </p>
          );
     }

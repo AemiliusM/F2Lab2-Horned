@@ -1,11 +1,38 @@
+#root{
+    background-image: radial-gradient(rgb(250, 253, 228) , rgb(152, 245, 245), rgb(224, 108, 247));
+    background-size:100%;
+}
+
 .App {
     align-content: center;
-    justify-content: center;
-    display: grid;
-    grid-template-columns:auto;
-   grid-column-end: 2;
+    justify-items: center;
+    display: flex;
+    flex-direction: row;
 }
 div{
-display: grid;
+align-content: center;
+justify-content: center;
+display: flex;
+flex-direction: row;
 flex-wrap: wrap;
+}
+.dropdown{
+    font-family:fantasy;
+}
+.dropdown-box{
+    width: 100px;
+    height: 100px;
+    font-family:fantasy;
+}
+p{
+    width: min-content;
+    margin: 1%;
+    font-family:fantasy;
+    font-size: large;
+    background:linear-gradient( to top, rgb(224, 108, 247), rgb(152, 245, 245), rgb(250, 253, 228));
+    border-radius: 200% 500% 800% 600%;
+}
+span{
+    text-transform: capitalize;
+   border:black;
 }
